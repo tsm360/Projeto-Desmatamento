@@ -7,4 +7,9 @@ O projeto em questão contempla o desmatamento em biomas do Brasil. O repositór
 
 Foi feito download da fonte de dados do site basededados.org em formato csv. Em seguida foi criado a estrutura em Pyspark no Google Colab para receber esses dados e ser possível sua manipulação. Neste ambiente 
 os dados foram preparados e ajustados, sendo possível a extração de algumas informações já neste momento.
-Em seguida, com os dados já tratados, fizemos a integração 
+Vale a observação que no código ipynb no Google Colab foi criado um campo "caracteristicas" que armazenava os valores de outros 5 campos, e em seguida um novo
+campo foi criado chamado "caracteristicas_normalizadas". Utilizei esse campo para o modelo de regressão linear, para verificar o impacto desses valores sobre o 
+campo "desmatado". Porém, no fim, para conseguir salvar como csv foi necessário deletar as duas colunas contendo vetores, caso não fizesse isso, seria necessário
+salvar o arquivo como .parquet.
+Em seguida, com os dados já tratados, fizemos a integração com o Looker Studio para gerar um relatório interativo, que desse a possibilidade do usuário 
+personalizar a visualização dos dados de acordo com o que quisesse ver no momento.
